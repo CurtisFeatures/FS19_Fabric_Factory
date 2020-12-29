@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="woolPallet" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="8.2.2"/>
+  </Asset>
+
+  <Files>
+    <File fileId="12" filename="$data/maps/textures/european/props/euroPallet01_diffuse.png"/>
+    <File fileId="13" filename="$data/maps/textures/european/props/euroPallet01_normal.png"/>
+    <File fileId="14" filename="$data/maps/textures/european/props/euroPallet01_specular.png"/>
+    <File fileId="5" filename="blauerstoff.dds"/>
+    <File fileId="6" filename="gelberstoff.dds"/>
+    <File fileId="11" filename="logo.dds"/>
+    <File fileId="3" filename="metal_007.dds"/>
+    <File fileId="2" filename="mettal.dds"/>
+    <File fileId="9" filename="roterstoff.dds"/>
+    <File fileId="8" filename="roterstoff1.dds"/>
+    <File fileId="7" filename="weisserstoff.dds"/>
+    <File fileId="10" filename="weisserstoff1.dds"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="euroPallet01_mat" materialId="9">
+      <Texture fileId="12"/>
+      <Normalmap fileId="13"/>
+      <Glossmap fileId="14"/>
+    </Material>
+    <Material name="lambert1" materialId="5" diffuseColor="0.494118 0.494118 0.494118 1">
+    </Material>
+    <Material name="Material" materialId="11" specularColor="1 1 1">
+      <Texture fileId="3"/>
+    </Material>
+    <Material name="Material.001" materialId="6">
+      <Texture fileId="5"/>
+    </Material>
+    <Material name="Material.001" materialId="13">
+      <Texture fileId="6"/>
+    </Material>
+    <Material name="Material.001" materialId="8">
+      <Texture fileId="2"/>
+    </Material>
+    <Material name="Material.001" materialId="7">
+      <Texture fileId="9"/>
+    </Material>
+    <Material name="Material.001" materialId="4">
+      <Texture fileId="8"/>
+    </Material>
+    <Material name="Material.001" materialId="14">
+      <Texture fileId="7"/>
+    </Material>
+    <Material name="Material.001" materialId="10">
+      <Texture fileId="10"/>
+    </Material>
+    <Material name="sellingPointSigns_mat" materialId="12">
+      <Texture fileId="11"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="fabricpalett.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+    <Shape shapeId="1" name="fillablePallet_fabric" dynamic="true" compound="true" collisionMask="25178120" density="0.1" clipDistance="300" nodeId="36" materialIds="5" castsShadows="true" receiveShadows="true" nonRenderable="true">
+      <Shape shapeId="2" name="dynamicMountTrigger" translation="0 0.175 0" kinematic="true" trigger="true" collisionMask="8192" nodeId="37" materialIds="5" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+      <Shape shapeId="3" name="tensionBeltNode" translation="0 0.722266 0" visibility="false" clipDistance="100" nodeId="38" materialIds="5" castsShadows="true" receiveShadows="true"/>
+      <TransformGroup name="fillBags" translation="0 0.022 0.00211129" scale="0.9 0.9 0.83" nodeId="39">
+        <Shape shapeId="4" name="stoffgestell" translation="0.467869 0.664915 1.6654e-09" rotation="0 90 0" scale="0.55 0.5 0.55" nodeId="40" materialIds="8,11" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="5" name="stoffgestell_01" translation="0.463088 1.38285 2.44401e-09" rotation="0 90 0" scale="0.55 0.568954 0.55" nodeId="41" materialIds="8,11" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="6" name="stoffrolle1" translation="0.345882 0.63148 -0.011" rotation="90 0 -6.14879e-06" scale="0.29 0.5 0.29" nodeId="42" materialIds="6" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="6" name="stoffrolle2" translation="-0.315766 0.62863 -0.011" rotation="90 0 -6.14879e-06" scale="0.29 0.5 0.29" nodeId="43" materialIds="13" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="6" name="stoffrolle4" translation="-0.325 1.304 -0.011" rotation="90 0 -6.14879e-06" scale="0.29 0.5 0.29" nodeId="44" materialIds="14" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="6" name="stoffrolle5" translation="0.332 1.304 -0.011" rotation="90 0 -6.14879e-06" scale="0.29 0.5 0.29" nodeId="45" materialIds="4" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="5" name="stoffgestell_01" translation="0.461065 2.00762 2.5425e-09" rotation="0 90 0" scale="0.55 0.528436 0.55" nodeId="46" materialIds="8,11" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="6" name="stoffrolle3" translation="0.332 1.93 -0.011" rotation="90 0 -6.14879e-06" scale="0.29 0.5 0.29" nodeId="47" materialIds="7" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="6" name="stoffrolle6" translation="-0.325 1.93 -0.011" rotation="90 0 -6.14879e-06" scale="0.29 0.5 0.29" nodeId="48" materialIds="10" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="7" name="logo" translation="0.0156653 0.603497 0.56578" scale="0.1 0.1 0.3" clipDistance="250" nodeId="49" materialIds="12" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="7" name="logo1" translation="0.0637309 0.584808 -0.57116" rotation="180 0 -180" scale="0.1 0.1 0.3" clipDistance="250" nodeId="50" materialIds="12" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="7" name="logo1" translation="-0.0182177 1.915 -0.562216" rotation="180 0 -180" scale="0.1 0.1 0.3" clipDistance="250" nodeId="51" materialIds="12" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="7" name="logo" translation="-0.00744974 1.915 0.562008" scale="0.1 0.1 0.3" clipDistance="250" nodeId="52" materialIds="12" castsShadows="true" receiveShadows="true"/>
+      </TransformGroup>
+      <Shape shapeId="8" name="dischargeTrigger" translation="1.42109e-16 0.759947 0" visibility="false" kinematic="true" compound="true" trigger="true" collisionMask="1073741824" nodeId="53" materialIds="5" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+      <Shape shapeId="9" name="apfelPalletVis" clipDistance="300" nodeId="54" materialIds="9" castsShadows="true" receiveShadows="true">
+        <Shape shapeId="10" name="tensionBeltShape" visibility="false" clipDistance="10" nodeId="55" materialIds="5" castsShadows="true" receiveShadows="true"/>
+      </Shape>
+      <TransformGroup name="collisions" translation="0 0.017 0" nodeId="56">
+        <Shape shapeId="11" name="solidColi" translation="0 0.175 0" visibility="false" compoundChild="true" collisionMask="16781314" density="0.7" nodeId="57" materialIds="5" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+        <Shape shapeId="12" name="colPart01" translation="0.00271691 0.181872 0.000948154" visibility="false" compoundChild="true" collisionMask="25178120" density="0.02" clipDistance="300" nodeId="58" materialIds="5" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+        <Shape shapeId="13" name="colPart02" translation="0.622586 0.181872 0.000948154" visibility="false" compoundChild="true" collisionMask="25178120" density="0.02" clipDistance="300" nodeId="59" materialIds="5" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+        <Shape shapeId="14" name="colPart03" translation="-0.622301 0.181872 0.000948154" visibility="false" compoundChild="true" collisionMask="25178120" density="0.02" clipDistance="300" nodeId="60" materialIds="5" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+        <Shape shapeId="15" name="colPart04" translation="0.00271691 0.181872 -0.433009" visibility="false" compoundChild="true" collisionMask="25178120" density="0.02" clipDistance="300" nodeId="61" materialIds="5" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+        <Shape shapeId="16" name="colPart05" translation="0.00271691 0.181872 0.434665" visibility="false" compoundChild="true" collisionMask="25178120" density="0.02" clipDistance="300" nodeId="62" materialIds="5" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+        <Shape shapeId="17" name="colPart06" translation="0.622586 0.181872 0.434665" visibility="false" compoundChild="true" collisionMask="25178120" density="0.02" clipDistance="300" nodeId="63" materialIds="5" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+        <Shape shapeId="18" name="colPart07" translation="0.622586 0.181872 -0.433009" visibility="false" compoundChild="true" collisionMask="25178120" density="0.02" clipDistance="300" nodeId="64" materialIds="5" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+        <Shape shapeId="19" name="colPart08" translation="-0.622301 0.181872 0.434665" visibility="false" compoundChild="true" collisionMask="25178120" density="0.02" clipDistance="300" nodeId="65" materialIds="5" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+        <Shape shapeId="20" name="colPart09" translation="-0.622301 0.181872 -0.433009" visibility="false" compoundChild="true" collisionMask="25178120" density="0.02" clipDistance="300" nodeId="66" materialIds="5" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+      </TransformGroup>
+    </Shape>
+  </Scene>
+
+  <UserAttributes>
+    <UserAttribute nodeId="36">
+      <Attribute name="deleteIfEmpty" type="boolean" value="true"/>
+      <Attribute name="dynamicMountForceLimitScale" type="float" value="1"/>
+      <Attribute name="dynamicMountTriggerIndex" type="string" value="0>1"/>
+      <Attribute name="fillType" type="string" value="tissue"/>
+      <Attribute name="meshNodes" type="string" value="0 0|6"/>
+      <Attribute name="startFillLevel" type="integer" value="0"/>
+      <Attribute name="startScale" type="float" value="1"/>
+      <Attribute name="useRandomRot" type="boolean" value="false"/>
+      <Attribute name="visibilityNodesAdditive" type="boolean" value="true"/>
+      <Attribute name="visibilityNodesIndex" type="string" value="0>2"/>
+    </UserAttribute>
+  </UserAttributes>
+
+</i3D>

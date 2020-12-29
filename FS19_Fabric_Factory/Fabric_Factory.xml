@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<placeable>
+    <storeData>
+        <name>Fabric Factory</name>
+        <specs>
+            <capacity>60000</capacity>
+            <fillTypes>emptypallets cotton wool water</fillTypes>
+        </specs>
+		<functions>
+			<function>Production of Fabric</function>
+        </functions>
+        <image>store_Fabric.dds</image>
+        <price>100000</price>
+        <lifetime>2000</lifetime>
+        <dailyUpkeep>30</dailyUpkeep>
+        <rotation>0</rotation>
+        <brand>GCPLACEABLE</brand>
+        <species>placeable</species>
+        <category>globalCompanyPlaceable</category>
+    </storeData>
+
+    <placeableType>GC_ProductionFactoryPlaceable</placeableType>
+    <filename>FactoryBase.i3d</filename>
+    <placement testSizeX="30" testSizeZ="17" sizeX="25" sizeZ="12" useRandomYRotation="false" useManualYRotation="true"/>
+
+	<hotspots>
+        <hotspot name="Fabric_Factory" fullName="Fabric_Factory" imageName="SELLING_POINT" hidable="true" linkNode="1|5" category="CATEGORY_TRIGGERS"/>
+    </hotspots>
+
+
+<!--
+===============================================================================================================================
+ -->
+
+    <productionFactories>
+		<productionFactory indexName="Fabric" saveId="globalCompany_Fabric">
+			<guiInformation title="FS19_Fabric_Factory_FactoryName" imageFilename="icon_Fabric.dds" description="FS19_Fabric_Factory_FactoryDescription" cameraFeed="gui_camera"/>
+			<operation updateDelayMinutes="1" showInGlobalGUI="true" />
+
+
+
+            <registerUnloadingTriggers>
+				<unloadingTrigger name="UnloadingTriggerGrain" exactFillRootNode="exactFillRootNode1" baleTriggerNode="baleTrigger1" />
+				<unloadingTrigger name="UnloadingTriggerGrain2" exactFillRootNode="exactFillRootNode2" baleTriggerNode="baleTrigger2" />
+				<unloadingTrigger name="UnloadingTriggerGrain3" exactFillRootNode="exactFillRootNode3" baleTriggerNode="baleTrigger3" />
+			</registerUnloadingTriggers>
+
+			<registerInputProducts>		
+				<inputProduct name="IP_GRAIN" capacity="30000" title="FS19_Fabric_Factory_Factory_Input1" > 
+					<fillTypes>
+						<fillType name="cotton" />
+						<fillType name="wool" />
+					</fillTypes>
+					
+					<inputMethods>
+						<unloadingTrigger name="UnloadingTriggerGrain"/>
+					</inputMethods>	
+					
+					<visibilityNodes>
+						<nodeGroup hasChildCollisions="true" type="VISIBILITY">
+							<child node="fillablePallet9" />
+							<child node="fillablePallet10" />
+							<child node="fillablePallet11" />
+							<child node="fillablePallet12" />
+							<child node="fillablePallet13" />
+							<child node="fillablePallet14" />
+						</nodeGroup>
+					</visibilityNodes>
+					<digitalDisplays>
+						<display displayType="LEVEL" numbers="IN_Display1" emptyNumberColor="1 0 0 1" numberColor="1 1 0 1" fullNumberColor="0 1 0 1"/>
+					</digitalDisplays>
+					
+				</inputProduct>
+				
+				
+				<inputProduct name="IP_WATER" capacity="100000" title="FS19_Fabric_Factory_Factory_Input3" > 
+					<fillTypes>
+						<fillType name="water" />
+					</fillTypes>
+					
+					<inputMethods>
+						<unloadingTrigger name="UnloadingTriggerGrain3"/>
+					</inputMethods>	
+					
+				
+					<digitalDisplays>
+						<display displayType="LEVEL" numbers="IN_Display3" emptyNumberColor="1 0 0 1" numberColor="1 1 0 1" fullNumberColor="0 1 0 1"/>
+					</digitalDisplays>
+					
+				</inputProduct>
+				
+				
+				
+				<inputProduct name="IP_EMPTY" capacity="30000" title="FS19_Fabric_Factory_Factory_Input2" > 
+					<fillTypes>
+						<fillType name="emptypallet" />
+					</fillTypes>
+					
+					<inputMethods>
+						<unloadingTrigger name="UnloadingTriggerGrain2"/>
+					</inputMethods>	
+						
+					<visibilityNodes>
+						<nodeGroup hasChildCollisions="true" type="VISIBILITY">
+							<child node="fillablePallet1" />
+							<child node="fillablePallet2" />
+							<child node="fillablePallet3" />
+							<child node="fillablePallet4" />
+
+
+						</nodeGroup>
+					</visibilityNodes>
+					<digitalDisplays>
+						<display displayType="LEVEL" numbers="IN_Display2" emptyNumberColor="1 0 0 1" numberColor="1 1 0 1" fullNumberColor="0 1 0 1"/>
+					</digitalDisplays>
+					
+				</inputProduct>
+				
+								
+			</registerInputProducts>
+
+
+<!-- Output  -->
+			
+			<registerOutputProducts>
+			
+      			<outputProduct name="OP_FABRIC" fillType="fabric" capacity="60000" title="FS19_Fabric_Factory_Factory_Output">
+					<outputMethods>
+						<palletCreators fillType="fabric" palletCapacity="6000" xmlFilename="Paletten/fabricpalett.xml" activateDebugDraw="false" >
+							<palletCreator node="palletSpawnerPlaceNode1" palletInteractionTrigger="interactionTriggerPallet1"/>
+							<palletCreator node="palletSpawnerPlaceNode2" palletInteractionTrigger="interactionTriggerPallet2"/>
+							<palletCreator node="palletSpawnerPlaceNode3" palletInteractionTrigger="interactionTriggerPallet3"/>
+							<palletCreator node="palletSpawnerPlaceNode4" palletInteractionTrigger="interactionTriggerPallet4"/>
+							<palletCreator node="palletSpawnerPlaceNode5" palletInteractionTrigger="interactionTriggerPallet5"/>
+							<palletCreator node="palletSpawnerPlaceNode6" palletInteractionTrigger="interactionTriggerPallet6"/>
+							<palletCreator node="palletSpawnerPlaceNode7" palletInteractionTrigger="interactionTriggerPallet7"/>
+							<palletCreator node="palletSpawnerPlaceNode8" palletInteractionTrigger="interactionTriggerPallet8"/>
+							<palletCreator node="palletSpawnerPlaceNode9" palletInteractionTrigger="interactionTriggerPallet9"/>
+							<palletCreator node="palletSpawnerPlaceNode10" palletInteractionTrigger="interactionTriggerPallet10"/>
+						</palletCreators>
+					</outputMethods>
+					
+				    <digitalDisplays>
+						<display displayType="LEVEL" numbers="OP_Display" emptyNumberColor="0 1 0 1" numberColor="1 1 0 1" fullNumberColor="1 0 0 1"/>
+					</digitalDisplays>
+		  	</outputProduct>
+			
+			</registerOutputProducts>
+
+
+<!-- productLines  -->
+
+			<productLines>
+				<productLine autoLineStart="true" outputPerHour="1000" title="FS19_Fabric_Factory_productLine_Fabric" showInGUI="true">
+
+					<inputs>
+						<inputProduct name="IP_GRAIN" percent="50" />
+						<inputProduct name="IP_WATER" percent="20" />		
+						<inputProduct name="IP_EMPTY" percent="30" />		
+						
+					</inputs>					
+
+					<outputs>
+						<outputProduct name="OP_FABRIC" percent="75" />						
+					</outputs>					
+
+					<playerTrigger playerTriggerNode="playerTrigger" drawUI="true"/>					
+
+    	 </productLine>
+  	 </productLines>
+
+<!-- i3d id registr  -->
+			<i3dMappings>
+
+				<i3dMapping id="exactFillRootNode1" node="1|0|0|0|0" />  
+ 				<i3dMapping id="exactFillRootNode2" node="1|0|0|1|0" /> 
+ 				<i3dMapping id="exactFillRootNode3" node="1|0|0|1|3" />  
+				<i3dMapping id="baleTrigger1" node="1|0|0|0|1"/>
+ 				<i3dMapping id="baleTrigger2" node="1|0|0|1|1"/>
+ 				<i3dMapping id="baleTrigger3" node="1|0|0|1|2"/>
+				<i3dMapping id="IN_Display1" node="1|0|0|0|2" />
+ 				<i3dMapping id="IN_Display2" node="1|0|0|0|3" />
+ 				<i3dMapping id="IN_Display3" node="1|0|0|0|4" />
+				<i3dMapping id="playerTrigger" node="1|3" />
+				<i3dMapping id="start" node="1|8" />
+				<i3dMapping id="hight" node="1|9" />
+				<i3dMapping id="width" node="1|10" />				
+				<i3dMapping id="OP_Display" node="1|1|0" />  				
+				<i3dMapping id="gui_camera" node="0" /> 				
+				<i3dMapping id="interactionTriggerPallet1" node="1|2|1|0|0" />
+				<i3dMapping id="palletSpawnerPlaceNode1" node="1|2|1|0|1" />
+				<i3dMapping id="interactionTriggerPallet2" node="1|2|1|1|0" />
+				<i3dMapping id="palletSpawnerPlaceNode2" node="1|2|1|1|1" />
+				<i3dMapping id="interactionTriggerPallet3" node="1|2|1|2|0" />
+				<i3dMapping id="palletSpawnerPlaceNode3" node="1|2|1|2|1" />
+				<i3dMapping id="interactionTriggerPallet4" node="1|2|1|3|0" />
+				<i3dMapping id="palletSpawnerPlaceNode4" node="1|2|1|3|1" />
+				<i3dMapping id="interactionTriggerPallet5" node="1|2|1|4|0" />
+				<i3dMapping id="palletSpawnerPlaceNode5" node="1|2|1|4|1" />
+				<i3dMapping id="interactionTriggerPallet6" node="1|2|0|0|0" />
+				<i3dMapping id="palletSpawnerPlaceNode6" node="1|2|0|0|1" />
+				<i3dMapping id="interactionTriggerPallet7" node="1|2|0|1|0" />
+				<i3dMapping id="palletSpawnerPlaceNode7" node="1|2|0|1|1" />
+				<i3dMapping id="interactionTriggerPallet8" node="1|2|0|2|0" />
+				<i3dMapping id="palletSpawnerPlaceNode8" node="1|2|0|2|1" />
+				<i3dMapping id="interactionTriggerPallet9" node="1|2|0|3|0" />
+				<i3dMapping id="palletSpawnerPlaceNode9" node="1|2|0|3|1" />
+				<i3dMapping id="interactionTriggerPallet10" node="1|2|0|4|0" />
+				<i3dMapping id="palletSpawnerPlaceNode10" node="1|2|0|4|1" />
+				<i3dMapping id="fillablePallet1" node="1|0|0|3|0"/>
+				<i3dMapping id="fillablePallet2" node="1|0|0|3|3"/>
+				<i3dMapping id="fillablePallet3" node="1|0|0|3|1"/>
+				<i3dMapping id="fillablePallet4" node="1|0|0|3|2"/>
+				<i3dMapping id="fillablePallet9" node="1|0|0|2|3"/>
+				<i3dMapping id="fillablePallet10" node="1|0|0|2|5"/>
+				<i3dMapping id="fillablePallet11" node="1|0|0|2|4"/>
+				<i3dMapping id="fillablePallet12" node="1|0|0|2|2"/>
+				<i3dMapping id="fillablePallet13" node="1|0|0|2|6"/>
+				<i3dMapping id="fillablePallet14" node="1|0|0|2|1"/>
+
+			</i3dMappings>
+
+
+		</productionFactory>
+	</productionFactories>			
+
+    	
+    	
+<!--
+===============================================================================================================================
+ -->
+    	
+    	
+    <triggerMarkers>
+        <triggerMarker node="1|3" />
+    </triggerMarkers>
+	
+    <clearAreas>
+        <clearArea startNode="1|8" widthNode="1|10" heightNode="1|9"/>
+    </clearAreas>
+	
+    <leveling requireLeveling="true" maxSmoothDistance="10" maxSlope="75" maxEdgeAngle="30">
+        <levelAreas>
+        <levelArea startNode="1|8" widthNode="1|10" heightNode="1|9" groundType="asphalt"/>
+        </levelAreas>
+    </leveling>
+	
+	<seasons>
+        <maskAreas>
+        <maskArea startNode="1|8" widthNode="1|10" heightNode="1|9"/>
+        </maskAreas>
+    </seasons>
+
+    <tipOcclusionUpdateArea sizeX="25" sizeZ="20" />
+	
+	
+
+</placeable>
+
+
+
+
+    

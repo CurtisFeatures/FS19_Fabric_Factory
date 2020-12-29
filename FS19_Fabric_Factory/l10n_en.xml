@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<l10n>
+	<elements>
+		<e k="FS19_Fabric_Factory_FactoryName" v="Fabric "/>
+		<e k="FS19_Fabric_Factory_FactoryDescription" v="This Produktion makes Fabric."/>
+		<e k="FS19_Fabric_Factory_productLine_Fabric" v="Fabric Production"/>
+		<e k="FS19_Fabric_Factory_Factory_Input1" v="cotton wool"/>
+		<e k="FS19_Fabric_Factory_Factory_Input2" v="emptypallet"/>
+		<e k="FS19_Fabric_Factory_Factory_Input3" v="water"/>
+		<e k="FS19_Fabric_Factory_Factory_Output" v="Fabric"/>
+
+
+		
+	</elements>
+</l10n>

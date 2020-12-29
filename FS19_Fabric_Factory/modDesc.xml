@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="44">
+    <author>CurtisFeatures</author>
+    <version>1.0</version>
+    <title>
+        <en>Fabric Factory</en>
+        <de>Fabric Factory</de>
+    </title>
+    <description>
+        <en><![CDATA[Tissue Factory]]></en>
+        <de><![CDATA[Tissue Factory]]></de>
+    </description>
+    <iconFilename>store_Fabric.dds</iconFilename>
+    <multiplayer supported="true" />
+	
+	<l10n>
+		<text name="fabric">
+			<en>Fabric</en>
+			<de>Fabric</de>		
+		</text>
+	   
+	</l10n>	
+	
+	
+    <storeItems>
+        <storeItem xmlFilename="Fabric_Factory.xml" />
+        <storeItem xmlFilename="Paletten/fabricpalett.xml" />
+    </storeItems>
+	
+	<extraSourceFiles>
+		<sourceFile filename="GC_Checker.lua" />
+		<sourceFile filename="register.lua" />
+    </extraSourceFiles>
+    
+    <brands>
+        <brand name="GCPLACEABLE" title="GlobalCompany Placeable" image="../FS19_GlobalCompany/brand_placeable.dds"/>
+    </brands>
+	
+	
+	<globalCompany minimumVersion="1.0.0.0" />
+	
+</modDesc>
