@@ -2,7 +2,7 @@
 <map>
 
     <fillTypes>
-        <fillType name="fabric" title="fabric" showOnPriceTable="true" pricePerLiter="0.250" >
+        <fillType name="fabric" title="fabric" showOnPriceTable="true" pricePerLiter="0.5" >
             <image hud="Paletten/hud_fill_fabric.dds" hudSmall="Paletten/hud_fill_fabric_smal.dds" />
             <physics massPerLiter="0.50" maxPhysicalSurfaceAngle="15" />
             <pallet filename="Paletten/fabricpalett.xml" />
