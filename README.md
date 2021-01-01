@@ -12,6 +12,10 @@ Download the latest release and drop the zip into your mod folder.
 
 ## Changes
 
+### V1.0  
 * n/a - Initial release  
+
+### V1.1  
+* Increased sell price  
 
 ![Mod](https://github.com/CurtisFeatures/FS19_Fabric_Factory/blob/main/image.png?raw=true)
