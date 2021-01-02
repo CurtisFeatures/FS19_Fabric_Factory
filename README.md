@@ -18,4 +18,10 @@ Download the latest release and drop the zip into your mod folder.
 ### V1.1  
 * Increased sell price  
 
+### V1.2  
+* Corrected leading forward slash on textures
+* Corrected case on store image  
+
+
+
 ![Mod](https://github.com/CurtisFeatures/FS19_Fabric_Factory/blob/main/image.png?raw=true)
