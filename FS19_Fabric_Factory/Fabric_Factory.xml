@@ -155,7 +155,7 @@
 
 					<inputs>
 						<inputProduct name="IP_GRAIN" percent="50" />
-						<inputProduct name="IP_WATER" percent="20" />		
+						<inputProduct name="IP_WATER" percent="50" />		
 						<inputProduct name="IP_EMPTY" percent="30" />		
 						
 					</inputs>					
